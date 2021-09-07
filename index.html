@@ -1,0 +1,30 @@
+<html>
+<title>
+	Home Page
+</title>
+<div id="cf">
+	<input type="file" id="files" onchange="urln()" /><br>
+<table>
+	<tr><td>
+<p id="wait"></p>
+<img id="foto" width="500px" hidden></img>
+<canvas id="canvasfoto"></canvas><br>
+</td><td>
+<input type='range' id="x" value="0" onchange="cropRect()"></input><br>
+<input type='range' id="y" value="0" onchange="cropRect()"></input><br>
+<input type='range' id="w" value="10" onchange="cropRect()" min="10" ></input><br>
+<canvas id="crop" height="200" width="200"></canvas><br>
+<button id="btn_crop" onclick="makeIMG()" style="width:200px;height: 20px;border: 1px solid black;border-radius: 5px;">Crop!</button>
+</td>
+	</tr>
+</table>
+<script src="cropfile.js"></script>
+</div>
+<div disabled='true'>
+	<video id="video" width="640" height="640" src="video.mp4" muted></video>
+	<canvas id="canvas" width="640" height="640"></canvas><br>
+	<video id="vidcan" width="640" height="640" hidden="true" muted></video><br>
+	<button id="butt" onclick="mulai()">Mulai Proses</button>
+</div>
+<script src="prog.js"></script>
+</html>

@@ -1,0 +1,1 @@
+drawImage => getImageData => edit => putImageData => DrawImage
