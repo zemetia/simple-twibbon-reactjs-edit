@@ -1,0 +1,22 @@
+<title>haha</title>
+<input type="file" id="files" onchange="urln()" />
+<video id=video></video>
+<script>
+	function urln(){
+	var files=document.getElementById("files");
+	var vid=document.getElementById("video");
+	var file=files.files;
+
+	console.log(file);
+	console.log(file[0]);
+	var url = URL.createObjectURL(file[0]);
+	vid.src = url;
+	vid.autoplay = true;
+	console.log(url);
+	var a = document.createElement("a");
+	a.download = "test.mp4";
+	a.href = url;
+	a.click();
+
+}
+</script>
